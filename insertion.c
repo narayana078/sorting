@@ -17,7 +17,7 @@ int main()
 
 void insertion(int arr[],int n)
 {
-	int i=0,j=0,temp=0,p=0;
+	int i,j,temp,p;
 	for(i=1;i<n;i++)
 	{
 		temp=arr[i];
