@@ -1,16 +1,17 @@
 #include <stdio.h>
 void merge(int [], int beg, int mid, int end);
 void merge_sort(int arr[], int beg, int end);
+int n=0;
 int main()
 {
 	int a[]={34,65,3,76,44,90,43,21,54,75};
-	int n=sizeof(a)/sizeof(int);
+	n=sizeof(a)/sizeof(int);
 	int i;
 	printf("unsorted: ");
 	for(i=0;i<n;i++)
 		printf("%d\t",a[i]);
 	printf("\nsorted:");
-	merge(a,n);
+	merge_sort(a,0,n-1);
 	for(i=0;i<n;i++)
 		printf("%d\t",a[i]);
 	return 0;
@@ -18,7 +19,7 @@ int main()
 
 void merge(int arr[], int beg, int mid, int end)
 {
-	int i=beg, j=mid+1, k=beg, temp[size],l;
+	int i=beg, j=mid+1, k=beg, temp[n],l;
 	while((i<=mid) && (j<=end))
 	{
 		 if(arr[i] <= arr[j])
