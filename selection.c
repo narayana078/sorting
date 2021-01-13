@@ -1,22 +1,9 @@
-#include<stdio.h>
-void selection(int [],int);
-int main()
-{
-	int a[]={34,65,3,76,44,90,43,21,54,75};
-	int n=sizeof(a)/sizeof(int);
-	int i;
-	printf("unsorted: ");
-	for(i=0;i<n;i++)
-		printf("%d\t",a[i]);
-	printf("\nsorted:");
-	selection(a,n);
-        for(i=0;i<n;i++)
-		printf("%d\t",a[i]);
-	return 0;
-}
-
+#ifndef __HEADER__
+#include"header.h"
+#endif
 void selection(int arr[],int n)
 {
+	gettimeofday(&tv1, NULL);
 	int i,j,temp,p;
 	for(i=0;i<n;i++)
 	{
@@ -25,8 +12,20 @@ void selection(int arr[],int n)
 	{	if(arr[j]<arr[p])
 			p=j;
 	}
+
 		temp=arr[p];
 		arr[p]=arr[i];
 		arr[i]=temp;
 	}
+        gettimeofday(&tv2, NULL);
+        time = (double) (tv2.tv_usec - tv1.tv_usec)/1000000+ (double) (tv2.tv_sec - tv1.tv_sec)*1000000;
+        for(i=0;i<n-1;i++)
+	{if(arr[i]<=arr[i+1])
+		continue;
+	else
+		printf("failure\t");
+	}
+	if(i==n-1)
+	printf("sucess\t");
+	printf("%f\n",time);
 }
