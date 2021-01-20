@@ -1,4 +1,13 @@
 #!/bin/sh
+CC=gcc
+rm -rf *.o main
+$CC -c main.c -o main.o
+$CC -c insertion.c -o insertion.o
+$CC -c bubble.c -o bubble.o
+$CC -c selection.c -o selection.o
+$CC -c quick.c -o quick.o
+$CC -c merge.c -o merge.o
+$CC main.o insertion.o bubble.o selection.o quick.o  merge.o -o main
 
 echo "bubble sort"
 /home/narayana/Git/sorting/main 0 1 2 3 4 5 6 7 8 9 10
