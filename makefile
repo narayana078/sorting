@@ -23,7 +23,14 @@ merge.o:
 	$(CC) -c merge.c -o merge.o
 clean:
 	rm -rf *.o main
+all:
+	@make bsort
+	@make ssort
+	@make isort
+	@make qsort
+	@make msort
 bsort:
+	@echo "bubble"
 	@./main 0 $(i1)
 	@./main 0 $(i2)
 	@./main 0 $(i3)
@@ -31,6 +38,7 @@ bsort:
 	@./main 0 $(i5)
 	@./main 0 $(i6)
 ssort:
+	@echo "selection sort"
 	@./main 1 $(i1)
 	@./main 1 $(i2)
 	@./main 1 $(i3)
@@ -38,6 +46,7 @@ ssort:
 	@./main 1 $(i5)
 	@./main 1 $(i6)
 isort:
+	@echo "insertion sort"
 	@./main 2 $(i1)
 	@./main 2 $(i2)
 	@./main 2 $(i3)
@@ -45,6 +54,7 @@ isort:
 	@./main 2 $(i5)
 	@./main 3 $(i6)
 msort:
+	@echo "merge sort"
 	@./main 3 $(i1)
 	@./main 3 $(i2)
 	@./main 3 $(i3)
@@ -52,6 +62,7 @@ msort:
 	@./main 3 $(i5)
 	@./main 3 $(i6)
 qsort:
+	@echo "quick sort"
 	@./main 4 $(i1)
 	@./main 4 $(i2)
 	@./main 4 $(i3)

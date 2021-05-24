@@ -1,21 +1,6 @@
 #include<stdio.h>
 int partition(int [],int,int);
 void quick(int a[], int beg, int end);
-int main()
-{
-	int a[]={34,65,3,76,44,90,43,21,54,75};
-	int n=sizeof(a)/sizeof(int);
-	int i;
-	printf("unsorted: ");
-	for(i=0;i<n;i++)
-		printf("%d\t",a[i]);
-	printf("\nsorted:");
-	quick(a,0,n-1);
-	for(i=0;i<n;i++)
-		printf("%d\t",a[i]);
-	return 0;
-}
-
 int partition(int a[], int lb, int ub)
 {
 
