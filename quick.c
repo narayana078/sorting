@@ -15,6 +15,7 @@ int main()
 		printf("%d\t",a[i]);
 	return 0;
 }
+
 int partition(int a[], int lb, int ub)
 {
 
@@ -45,7 +46,7 @@ int partition(int a[], int lb, int ub)
 	return end;
 }
 void quick(int a[], int beg, int end)
-{
+{	
 	int loc;
 	if(beg<end)
 	{
@@ -54,4 +55,3 @@ void quick(int a[], int beg, int end)
 		quick(a, loc+1, end);
 	}
 }
-

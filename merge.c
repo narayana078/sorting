@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdio.h>
 void merge(int [], int beg, int mid, int end);
 void merge_sort(int arr[], int beg, int end);
@@ -20,6 +21,10 @@ int main()
 void merge(int arr[], int beg, int mid, int end)
 {
 	int i=beg, j=mid+1, k=beg, temp[n],l;
+=======
+void merge(int arr[], int beg, int mid, int end)
+{
+	int i=beg, j=mid+1, k=beg, temp[end+1],l;
 	while((i<=mid) && (j<=end))
 	{
 		 if(arr[i] <= arr[j])
@@ -54,7 +59,7 @@ void merge(int arr[], int beg, int mid, int end)
 
 
 void merge_sort(int arr[], int beg, int end)
-{
+{	
 	int mid;
 	if(beg<end)
 	{
